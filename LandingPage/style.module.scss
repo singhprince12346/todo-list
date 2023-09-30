@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "helvetica";
+  src: url("../../assets/Helvetica.ttf");
+}
+@import "../../assets/variables";
+
+.container {
+    overflow: hidden;
+    overflow-x: hidden;
+    background-image: url("../../images/ted.png");
+    background-size: cover;
+    margin: 0px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    @media #{$media-tablet-p} {
+        background-image: url("../../images/tabted.png");
+    }
+
+    @media #{$media-mobile} {
+        background-image: url("../../images/mobted.png");
+    }
+
+    @media #{$media-small} {
+        background-image: url("../../images/smallted.png");
+    }
+
+    .herocontent {
+        background-color: none;
+        margin-top: 220px;
+        height: 100vh;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media #{$media-tablet-p} {
+            margin-top: 250px;
+        }
+
+        .date_holder {
+            display: flex;
+            flex-direction: row;
+
+            .HeroButton {
+                text-decoration: none;
+                color: white;
+                font-size: 15px;
+                height: 15px;
+                width: 100px;
+                text-align: center;
+                font-family: "helvetica";
+                padding: 10px;
+                background-color: rgb(230, 43, 30);
+            }
+
+            .date {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100px;
+                margin: 0px;
+                vertical-align: middle;
+                text-align: center;
+                color: white;
+                font-family: "helvetica";
+                border: solid 2px white;
+            }
+        }
+
+        .slogans {
+            font-family: "helvetica";
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            float: right;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            font-weight: 500;
+
+            @media #{$media-tablet-p} {
+                position: relative;
+                float: none;
+                font-size: 30px;
+            }
+
+            @media #{$media-mobile} {
+                position: relative;
+                float: none;
+                font-size: 30px;
+                margin-left: 39%;
+            }
+
+            @media #{$media-small} {
+                position: relative;
+                float: none;
+                font-size: 30px;
+                  margin-left: 39%;
+            }
+
+            .spin:after {
+                content: "";
+                animation: spin 10s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    content: "Commu";
+                }
+
+                20% {
+                    content: "Oppourtu";
+                }
+
+                40% {
+                    content: "Confrater";
+                }
+
+                60% {
+                    content: "Huma";
+                }
+
+                80% {
+                    content: "Moder";
+                }
+
+                100% {
+                    content: "Sempiter";
+                }
+            }
+        }
+
+        .herotitle {
+            font-family: "helvetica";
+            font-size: 40px;
+            margin-bottom: 0px;
+            font-weight: 600;
+            color: white;
+            background-image: none;
+            background-color: transparent;
+        }
+
+        .heroslogan {
+            font-family: "helvetica";
+            color: white;
+            font-size: 20px;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .red {
+            color: rgb(230, 43, 30);
+            font-weight: 700;
+        }
+    }
+}
