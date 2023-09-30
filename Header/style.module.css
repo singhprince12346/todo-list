@@ -1,0 +1,17 @@
+.container
+{
+ color: white;
+ background-color: white;
+     
+}
+#sticky {
+    padding: 10px 10px; /* Some padding */
+    text-align: center; /* Centered text */
+    font-size: 20px; /* Big font size */
+    font-weight: bold;
+    position: fixed; /* Fixed position - sit on top of the page */
+    top: 0;
+    width: 100%; /* Full width */
+    transition: 1s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
