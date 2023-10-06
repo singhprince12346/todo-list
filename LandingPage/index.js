@@ -1,28 +1,20 @@
-//import { Link } from "gatsby"
-//import PropTypes from "prop-types"
-import React from "react"
-//import tedx from '../../images/TedX.png'
-import style from './style.module.scss'
-import Container from '../Container/index'
-import tedlogo from '../../images/lgb.png'
+import React from "react";
+import PropTypes from "prop-types";
 
-const LandingPage =()=>
-(
+import Container from "../Container";
+import Hero from "./Hero";
+import styles from "./LandingPage.module.css";
 
+const LandingPage = () => {
+  return (
+    <main className={styles.landingPage}>
+      <Hero />
+    </main>
+  );
+};
 
-<div className={style.container}>
-<Container>
-    <div className={style.herocontent}>
-
-
-                    <p className={style.slogans}>"<span className={style.spin}></span><span className={style.red}>nity"<br/></span><img src={tedlogo} style={{height:'100px'}} alt='tedxlogo' />
-                    <p style={{ fontStyle: 'italic', fontSize: '20px' }}>Tending To <span className={style.red}> Infinity</span></p> </p>
-    </div>
-            </Container>
-</div>
-
-
-)
-
+LandingPage.propTypes = {
+  // no props yet
+};
 
 export default LandingPage;

@@ -1,40 +1,38 @@
-//import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from 'react';
-import componentDidMount from 'react';
+import { useEffect } from "react";
+import PropTypes from "prop-types";
 
-//import TedLogo from '../../images/1.png';
-import NavBar from '../Navbar/index'
+import Navbar from "../Navbar";
 
+const Header = ({ siteTitle }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const sticky = document.getElementById("sticky");
 
-function myfunc() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("sticky").style.fontSize = "15px";
-    } else {
-        document.getElementById("sticky").style.fontSize = "25px";
-    }
-}
+      const scrollPosition = window.scrollY;
 
-const Header = ({ siteTitle }) => (
-    <div onScroll="myfunc()">
-    <div id="sticky">
-        <NavBar />
+      if (scrollPosition > 50) {
+        sticky.classList.add("small");
+      } else {
+        sticky.classList.remove("small");
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
 
-        </div>
-        </div>
-)
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-
+  return (
+    <header>
+      <div id="sticky" role="banner">
+        <Navbar />
+      </div>
+    </header>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
- 
-
-export default Header
+export default Header;
