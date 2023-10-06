@@ -1,0 +1,57 @@
+/* Hero.module.css */
+
+.hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .logo {
+    height: 100px;
+    margin: 20px 0;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .spin {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg); 
+    }
+  }
+  
+  .textRed {
+    color: #ff0000;
+  }
+  
+  .subhead {
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .hero {
+      padding: 40px 20px;
+    }
+    
+    h1 {
+      font-size: 32px;
+    }
+    
+    .subhead {
+      font-size: 18px;
+    }
+  }
